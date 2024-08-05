@@ -19,10 +19,10 @@ This project is an online ordering system designed to streamline the ordering pr
 
 ## Technology Stack
 
-- **Frontend**: [HTML, CSS, JavaScript]
-- **Backend**: [Django]
-- **Database**: [SQLite]
-- **Email Service**: [ SMTP (Simple Mail Transfer Protocol]
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Django
+- **Database**: SQLite
+- **Email Service**: SMTP (Simple Mail Transfer Protocol
 
 ## Installation and Setup
 
