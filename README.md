@@ -28,4 +28,4 @@ This project is an online ordering system designed to streamline the ordering pr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/vijayavardhanyamana/MilmaCanteen.git
