@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milma canteen</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/static/st.css">
+    
+
+</head>
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="" class="logo">Milma<span>Canteen</span></a>
+
+    <nav class="navbar">
+        <a href="inde.html">home</a>
+        <a href="inde.html#about">about</a>
+        <a href="inde.html#products">items</a>
+        <a href="inde.html#contact">order</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="login.html" class="fas fa-user"></a>
+    </div>
+
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section class="vh-100" style="background-color:skyblue">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-12">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+                                <div class="card-header h5 text-white bg-primary" class="text-align-center" style="font-size: 30px;">Order Details:</div>
+                                <div class="card-body px-4">
+                                    <br><br>
+                                    <form method="POST"  action="{% url 'ordere' %}">
+                                        {% csrf_token %}
+                                    <div class="form-outline">
+                                        <label class="form-label" name="typeEmail"  style="font-size: 30px;"><h5>quantity:</h5></label>
+                                        <input type="number" name="quantity" id="typeEmail" class="form-control my-3" size="50%" style="height:35px;"/>
+                                    </div>
+                                    <br><br>
+                                    <div class="form-outline">
+                                        <label class="form-label" for="typeEmail" style="font-size: 30px;"><h6>Add cooking instructions:</h6></label>
+                                        <textarea  name="ins" class="box" placeholder="Add cooking instructions:"id="" cols="30" rows="10">
+                                        </textarea>
+                                    </div>
+                                    <input type="submit" value="order" class="btn">
+                                </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="inde.html#home">home</a>
+            <a href="inde.html#about">about</a>
+            <a href="inde.html#products">items</a>
+            <a href="inde.html#contact">order</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+            <h3>locations</h3>
+            {% comment %} <a href="#">NIT calicut</a> {% endcomment %}
+            <a href="#">IIIT KOTTAYAM</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a>
+            <a href="#">milmatokens@gmail.com</a>
+            <a href="#"> IIIT KOTTAYM,PALA,KERALA ,INDIA-686635</a>
+            
+        </div>
+
+    </div>
+
+
+</section>
+</html>

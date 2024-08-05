@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milma canteen</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/static/st.css">
+    
+
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">Milma<span>Canteen</span></a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#products">items</a>
+        <a href="#contact">order</a>
+    </nav>
+
+    {% comment %} <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="login.html" class="fas fa-user"></a>
+    </div> {% endcomment %}
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Milma foods</h3>
+        <span> Best and Hygenic  </span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae laborum ut minus corrupti dolorum dolore assumenda iste voluptate dolorem pariatur.</p>
+        <a href="#contact" class="btn">order now</a>
+    </div>
+    <div class="image" class="justify center"></div>
+        
+    </div>
+    
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about  us </h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="/static/vid.mp4" loop autoplay muted></video>
+            <h3>Best Food franchise</h3>
+        </div>
+
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
+            <a href="#" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+<!-- prodcuts section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> Items available</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="/static/images (19) (1).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="chowmein">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="title"><h3>veg chowmein(Item:1)</h3></div>
+                <div class="price"> 45/- <span>50/-</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="/static/images (20).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="sodalime">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="title"><h3>Soda lime(Item:2)</h3></div>
+                <div class="price">27/- <span>30/-</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="/static/SIZZ.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="Sizzling Brownie">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="title"><h3>Sizzling Brownie(Item:3)</h3></div>
+                <div class="price">95/-<span>100/-</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="image">
+                <img src="/static/images (21).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="chole bhature">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h3>chole bhature</h3>
+                <h3>(item:4)</h3>
+            <div class="price"> 80/- <span>100</span> </div>
+                
+        </div>
+
+        <div class="box">
+            <span class="discount">no discount</span>
+            <div class="image">
+                <img src="/static/images (22).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="samosa">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>samosa(Item:5)</h3>
+                <div class="price"> 15/-  </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">no discount</span>
+            <div class="image">
+                <img src="/static/images (23).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="bread pakoda">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Bread pakoda(Item:6)</h3>
+                <div class="price"> 20/- </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="/static/images (24).jpeg">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="chole bhature">
+                    <button class="btn btn-primary" type="submit" value="veg pasta">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>veg pasta(Item:7)</h3>
+                <div class="price">45/- <span>50/-</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="image">
+                <img src="/static/images (25).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="chicken combo">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>chicken combo(Item:8)</h3>
+                <div class="price"> 80/- <span>100/-</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">No discount</span>
+            <div class="image">
+                <img src="/static/images (26) (1).jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <form method="POST"  action="{% url 'order1' %}">
+                        {% csrf_token %}
+                        <input type="hidden"  name="ordername" value="maggie">
+                    <button class="btn btn-primary" type="submit" value="order">order</button>
+                    </form>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>maggie(Item:9)</h3>
+                <div class="price"> 25/- </div>
+            </div>
+        </div>
+
+    </div>
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">order </h1>
+
+    <div class="row">
+
+        <form method="POST" action="{% url "orderq" %}">
+            {% csrf_token %}
+            <input type="text" name="ordername" placeholder="ordername" class="box" required>
+            <input type="text" name="quantity" placeholder="quantity" class="box" required>
+            {% comment %} <input type="text" name="ins" placeholder="instructions" class="box" required> {% endcomment %}
+            {% comment %} <input type="number" placeholder="quantity" class="box" required> {% endcomment %}
+            
+            
+            <textarea name="ins" class="box" placeholder="Add cooking instructions:
+            ex:
+            1)little bit spicy" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="order" class="btn">
+        </form>
+
+        <div class="image">
+            <img src="/static/images (1).png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#products">items</a>
+            <a href="#contact">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">NIT calicut</a>
+            <a href="#">IIIT KOTTAYAM</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a>
+            <a href="#">milmatokens@gmail.com</a>
+            <a href="#"> IIIT KOTTAYM,PALA,KERALA ,INDIA-686635</a>
+            
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>bekar group </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->   
+</body>
+</html>
